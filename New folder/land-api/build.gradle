@@ -1,0 +1,90 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version '2.1.2.RELEASE'
+    //id 'checkstyle'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.objectfrontier.land'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springBootAdminVersion', '2.1.1')
+}
+
+
+configurations {
+    //excluded tomcat to include jetty server
+    compile.exclude module: "spring-boot-starter-tomcat"
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-jetty'
+    implementation 'org.springframework.boot:spring-boot-starter-jersey'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'io.springfox:springfox-swagger2:2.9.2'
+    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.1.RELEASE'
+    implementation 'org.springframework.session:spring-session-core'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    //   implementation 'org.springframework.security:spring-security-cas'
+
+    runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+
+
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'mysql:mysql-connector-java'
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '0.7.5'
+    compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.2'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+
+//    compile 'org.hibernate:hibernate-core:4.3.6.Final'
+//    compile('com.zaxxer:HikariCP:2.5.1') {
+//        exclude group: 'org.hibernate', module: 'hibernate-core'
+//    }
+
+    //For later use, disabled as of now
+//    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-solr'
+//    implementation 'de.codecentric:spring-boot-admin-starter-client'
+//    implementation 'de.codecentric:spring-boot-admin-starter-server'
+//    implementation 'org.flywaydb:flyway-core'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+    }
+}
