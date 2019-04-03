@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="styles/login.css">
+    <title>Login page</title>
+  </head>
+  <body>
+    <div id="home">
+      <form class="form">
+        <div  id="login">OFS Login</div>
+        <div id="user">
+          <label>Username</label>
+          <input type="text" placeholder="UserName" id="username"/>
+        </div>
+        <div id="pwd" class="top_pad">
+          <label>Password</label>
+          <input type="password" placeholder="password" id="password"/>
+        </div>
+        <div class="top_pad">
+          <input type="button" onclick="validateInput()" value="Login"/>
+        </div>
+        <div class="timer"> Timer </div>
+        <div id="timer"></div>
+      </form>
+    </div>
+    <script src="scripts/login.js" ></script>
+  </body>
+</html>

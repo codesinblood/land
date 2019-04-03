@@ -1,0 +1,67 @@
+            Create a face book page
+Problem Statement :
+    Create a face book page and adding the members to that page.
+ 
+Inferred Requirement :
+    Account in face book	
+
+Events :
+    Create a page
+    
+        Source - User
+        Trigger - click
+    Get Info about page
+    
+        Source - User
+        Trigger - click
+    Get members Info
+    
+        Source - User
+        Trigger - click
+
+Create a page :
+
+    Start State    : Display face book page
+    
+    End State      : Show page details
+    
+    Job to be done : 
+            Create page
+            Load page
+          
+Get Info : 
+    Possibility 1: Valid Input
+
+    Start State    : Display page details
+    
+    End State      : Show add members list
+    
+    Job to be done : 
+            Submit information
+            Load information
+            Show list
+            
+Get Info : 
+    Possibility 2: Invalid Input
+
+    Start State    : Display page details
+    
+    End State      : Show error to user
+    
+    Job to be done : 
+            Submit information
+            Load information
+            Show list
+            
+Get Members :    
+
+    Start State    : Show add members list
+    
+    End State      : Show page details with members 
+    
+    Job to be done : 
+            Finish
+            Add members
+            Show post page    
+
+            

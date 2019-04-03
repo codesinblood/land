@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  top: 0
+}
+
+#person-table {
+  text-align: center;
+  top: 5%;
+  position: absolute;
+  right: 22%;
+  border: 1px solid;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+.lsp-panel {
+  height: 100%;
+  background-color: aqua;
+  float: left;
+  width: 30%;
+}
+
+.rsp-panel {
+  height: 100%;
+  width: 70%;
+  float: left;
+  background-color: tomato;
+}
+
+#person-panel {
+  height: 100%;
+}
+.person-panel {
+  height: 50%;
+}
+
+#person-info-panel {
+  background-color: darksalmon;
+}
+
+#person-list-panel {
+  background-color: bisque;
+      TEXT-ALIGN: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

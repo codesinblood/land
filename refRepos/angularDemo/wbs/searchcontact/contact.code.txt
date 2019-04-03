@@ -1,0 +1,12 @@
+class ContactPage{
+String contDeatils
+onClickSearch()
+collectDeatils()
+loadResult(result)
+reloadPage()
+}
+class Api{
+String result
+searchContact(contDetails)
+validate()
+}

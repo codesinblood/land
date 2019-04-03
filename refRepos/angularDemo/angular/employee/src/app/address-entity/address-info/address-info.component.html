@@ -1,0 +1,22 @@
+<div id="form">
+    <div>
+      <label>Id</label>
+      <input type="text" id="id" disabled [(ngModel)]="selectedItem.id">
+    </div>
+    <div>
+      <label>Street</label>
+      <input type="text" id="street" [(ngModel)]="selectedItem.street">
+    </div>
+    <div>
+      <label>City</label>
+      <input type="text" id="city" [(ngModel)]="selectedItem.city">
+    </div>
+    <div>
+      <label>PostalCode</label>
+      <input type="text" id="postal-code" [(ngModel)]="selectedItem.postalCode">
+    </div>
+  </div>
+  <div id="submit-reset">
+  <button id="submit">SUBMIT</button>
+  <button id="reset">RESET</button>
+  </div>

@@ -1,0 +1,34 @@
+@startuml
+skinparam defaultFontName Courier
+skinparam LifeLineFontSize 10
+autonumber
+
+User -> App : finish(membersInfo)
+App -> AppService : loadMembersInfo(membersInfo)
+AppService -> AppService : addMembersInfo(membersInfo)
+AppService -> App  :showPage()
+App --> User  : Ack
+@enduml
+
+     ,----.                 ,---.                        ,----------.                           
+     |User|                 |App|                        |AppService|                           
+     `-+--'                 `-+-'                        `----+-----'                           
+       | 1 finish(membersInfo)|                               |                                 
+       | --------------------->                               |                                 
+       |                      |                               |                                 
+       |                      | 2 loadMembersInfo(membersInfo)|                                 
+       |                      | ------------------------------>                                 
+       |                      |                               |                                 
+       |                      |                               |----.                            
+       |                      |                               |    | <b>3</b>                   
+       |                      |                               |<---' addMembersInfo(membersInfo)
+       |                      |                               |                                 
+       |                      |                               |                                 
+       |                      |          4 showPage()         |                                 
+       |                      | <------------------------------                                 
+       |                      |                               |                                 
+       |         5 Ack        |                               |                                 
+       | <- - - - - - - - - - -                               |                                 
+     ,-+--.                 ,-+-.                        ,----+-----.                           
+     |User|                 |App|                        |AppService|                           
+     `----'                 `---'                        `----------'                           

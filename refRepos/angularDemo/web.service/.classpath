@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="ws" path="src"/>
+	<classpathentry kind="src" output="web.ws" path="web"/>
+	<classpathentry kind="src" output="ws" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/java/lib/jcommander.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/java/lib/testng.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/java/lib/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/service/lib/HikariCP-2.4.3.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/service/lib/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="var" path="JETTY_HOME/lib/servlet-api-3.1.jar" sourcepath="/JETTY_HOME/lib/javax.servlet-api-3.1.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/web.service/web/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/web.service/web/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/web.service/web/lib/jackson-annotations-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/web.service/web/lib/jackson-core-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/dev/training/vinoth.ari/web.service/web/lib/jackson-databind-2.7.0.jar"/>
+	<classpathentry kind="lib" path="web/lib/commons-logging-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="web/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,16 @@
+[
+    {
+    "firstName": "Tanmay",
+    "lastName": "Patil",
+    "email": "tanmaypatil@xyz.com",
+    "admin": "yes",
+    "password": "demo"
+    },
+    {
+    "firstName": "vino",
+    "lastName": "ari",
+    "email": "vino@xyz.com",
+    "admin": "no",
+    "password": "demo111"
+    }
+]

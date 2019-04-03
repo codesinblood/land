@@ -1,0 +1,14 @@
+[
+    {
+    "id": "1",
+    "street": "kk st",
+    "city": "chennai",
+    "postalCode": "123456"
+    },
+    {
+    "id": "2",
+    "street": "krishna st",
+    "city": "T.V.Malai",
+    "postalCode": "6"
+    }
+]

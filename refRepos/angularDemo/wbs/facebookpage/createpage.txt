@@ -1,0 +1,22 @@
+@startuml
+User -> App : clickCreate()
+App -> App : loadPage()
+App --> User : view
+@enduml
+
+     ,----.          ,---.             
+     |User|          |App|             
+     `-+--'          `-+-'             
+       | clickCreate() |               
+       | ------------->|               
+       |               |               
+       |               ----.           
+       |                   | loadPage()
+       |               <---'           
+       |               |               
+       |     view      |               
+       | <- - - - - - -|               
+     ,-+--.          ,-+-.             
+     |User|          |App|             
+     `----'          `---'             
+     

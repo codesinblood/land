@@ -1,0 +1,51 @@
+body {
+  background-image: url("../assets/login.jpg");
+}
+
+#home {
+  height: 40%;
+  width: 28%;
+  top: 35%;
+  left: 36%;
+  position: absolute;
+}
+#user {
+    color: aliceblue;
+    font-family: -webkit-body;
+}
+
+#login {
+  color: aliceblue;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#forgot {
+    color: #FFFFFF;
+}
+.form {
+  top: 36%;
+  left: 23%;
+  position: absolute;
+}
+
+.top_pad {
+  padding-top: 15px;
+  text-align: center;
+  color: aliceblue;
+}
+
+#timer {
+  font-size: 27px;
+  padding-top: 10px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.timer {
+  font-size: 27px;
+  padding-top: 10px;
+  text-align: center;
+  color: aliceblue;
+}

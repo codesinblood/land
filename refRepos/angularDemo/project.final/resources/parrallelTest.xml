@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sample Test Suite" verbose="2">
+  <test name="Create Parallel Test">
+    <classes>
+       <class name="com.objectfrontier.training.jdbc.test.PersonServiceTest">
+        <methods>
+        <!-- <include name = "createPositiveTest" /> -->
+        <include name = "readPositiveTest" />
+        <!-- <include name = "testCreate_negative" /> -->
+      </methods>
+       </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,32 @@
+<div id="form">
+  <form (ngSubmit)="onSubmitSelect(submit)" #submit="ngForm">
+    <div>
+      <label>Id</label>
+      <input type="text" id="id" name="id" disabled [(ngModel)]="person.id"/>
+    </div>
+    <div>
+      <label>Firstname</label>
+      <input type="text" id="firstName" name="firstName" [(ngModel)]="person.firstName" required/>
+    </div>
+    <div>
+      <label>Lastname</label>
+      <input type="text" id="lastName" name="lastName" [(ngModel)]="person.lastName" required>
+    </div>
+    <div>
+      <label>Email</label>
+      <input type="text" id="email" name="email" [(ngModel)]="person.email" required email/>
+    </div>
+    <div>
+      <label>Birthdate</label>
+      <input type="text" id="birthDate" name="birthDate" [(ngModel)]="person.birthDate" required>
+    </div>
+    <div>
+      <label>IsAdmin</label>
+      <input type="text" id="admin" name="admin" [(ngModel)]="person.admin" required>
+    </div>
+    <div id="submit-reset">
+      <button id="submit" type="submit" [disabled]="!submit.valid">SUBMIT</button>
+      <!-- <button id="reset">RESET</button> -->
+    </div>
+  </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="list">
+    <div>
+      <button id="add" (click)="onAddSelect">Add</button>
+    </div>
+    <div>
+      <table id="address-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>PostalCode</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr (click)="onSelectRow(address)" *ngFor="let address of addresses" >
+              <td>{{address.id}}</td>
+              <td>{{address.street}}</td>
+              <td>{{address.city}}</td>
+              <td>{{address.postalCode}}</td>
+              <td><button type="button" id="delete" (click)="deletUser">Delete</button></td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    <router-outlet></router-outlet>
+  </div>

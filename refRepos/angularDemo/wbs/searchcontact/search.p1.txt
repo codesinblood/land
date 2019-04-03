@@ -1,0 +1,11 @@
+@startuml
+actor MobileUser 
+entity ContactPage
+entity Api
+
+MobileUser -> ContactPage : onClickSearch()
+ContactPage -> ContactPage : collectDeatils()
+ContactPage -> Api : searchContact(contDetails)
+Api -> Api : validate()
+Api -> ContactPage : loadResult(result)
+@enduml

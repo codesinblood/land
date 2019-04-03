@@ -1,0 +1,33 @@
+<div class="person">
+<div class="list">
+  <div>
+    <button id="add" [routerLink]="['new']" routerLinkActive="router-link-active" >Add</button>
+  </div>
+  <div>
+    <table id="person-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+          <th>DateOfBirth</th>
+          <th>IsAdmin</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr [routerLink]="[emp.id]" routerLinkActive="router-link-active" *ngFor="let emp of employee">
+            <td>{{emp.id}}</td>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.birthDate | date: 'dd-MM-yyyy'}}</td>
+            <td>{{emp.admin}}</td>
+            <td><button type="button" id="delete">Delete</button></td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+<router-outlet></router-outlet>
+</div>

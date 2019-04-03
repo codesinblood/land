@@ -1,0 +1,9 @@
+table, th, td {
+    border: 1px solid black;
+  }
+
+.list {
+    top: 0%;
+    height: 50%;
+    background-color: coral;
+}

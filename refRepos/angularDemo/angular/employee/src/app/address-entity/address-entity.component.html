@@ -1,0 +1,4 @@
+<div class="address">
+  <app-address-list (selectedItem)="onItemSelect($event)" (addSelected)="onAddSelect($event)"></app-address-list>
+  <app-address-info [selectedItem]= "selectedItem" [isAddSelect]="isAddSelect"></app-address-info>
+</div>>

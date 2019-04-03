@@ -1,0 +1,18 @@
+[
+{
+  "id": "1",
+  "firstName": "vino",
+  "lastName": "ari",
+  "email": "vvv@",
+  "birthDate": "10-12-1996",
+  "isAdmin": "1"
+},
+{
+  "id": "12",
+  "firstName": "vinoth",
+  "lastName": "ari",
+  "email": "vvv@1",
+  "birthDate": "10-12-1996",
+  "isAdmin": "0"
+}
+]

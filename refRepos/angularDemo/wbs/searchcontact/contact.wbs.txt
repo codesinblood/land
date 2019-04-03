@@ -1,0 +1,34 @@
+			Search a contact in contact book
+
+Problem Statement :
+	Search a contact in contact book.
+ 
+Inferred Requirement :
+	List of stored Contacts
+
+Events :
+        Mobile User clicking on Search button
+        
+
+Mobile User clicking on Search button :
+
+Start State    : Shows the contact page with text box and search button.
+ 	
+        Possibility 1 : 
+	
+	End State      : Show Results in contact page.
+	
+	Job to be done : 
+			Collect user details
+            Validate user details
+			Load Contacts
+            
+         Possibility 2 :
+	
+	End State      : Reload contact page with error message.
+	
+	Job to be done : 
+			
+            Collect user details
+            Validate user details
+			Reload Contact page

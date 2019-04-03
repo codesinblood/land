@@ -1,0 +1,133 @@
+**Folder structure:**
+
+src
+  - main
+    - java
+      - common
+        - assets
+        - exception
+          - error
+        - mapper
+        - util
+      - config
+      - dto (data transfer object)
+        - request
+        - response
+      - filter
+      - model (pojo)
+      - repository
+      - service
+        - impl
+      - security
+      - web (controller)
+
+    - resources
+      - application-dev.properties
+      - application-qa.properties
+      - application-staging.properties
+      - application-prod.properties
+      - application.properties
+      - META-INF
+        - template
+
+    - test
+      - common
+      - config
+      - service
+      - web
+
+
+**WBS:**
+
+- problem requirement / statement
+- inferred requirement
+- clarification
+
+- jobs to be done
+  - for each jobs to be done do:
+    - implementation plan:
+        - possibilities
+        - high level design
+        - API design
+        - file name basis design 
+        - sequence diagram
+        - method
+
+**WBS:**
+
+- Problem requirement
+    To implement a global exception handler that fetches all exceptions, intercepts the HTTPResponse and manipulates it. 
+    
+- Inferred requirement
+    Exception codes - Consolidated. 
+    Error information template that will be sent in response body.
+    Exceptions should be thrown only with the exception classes created within the project.
+    
+- Clarification
+    The exception will be thrown from the service which will be handled by the Exception handler that throws a manipulated response entity. 
+    The exception cause to be sent along with the exception details in response body? 
+
+- Jobs to be done
+    Create custom exception classes. 
+    Create a constant file and other exception signatures (Error codes, Exception type, Exception message)
+    Create global exception handler with individual methods that handles their respective exceptions and returns response entity. 
+    
+    
+    Create custom exception classes.
+    - implementation plan:
+        A determined set of expected exceptions is assumed. Based on the assumptions, specific classes are created. Details of the expected classes are mentioned in file name basis design. 
+      
+        - Possibilities
+            There are potential exceptions that are not related to assumed exceptions classes. Such exceptions will be handled by a generic handler method. 
+            
+        - High level design
+            * A generic exception handler method will be created that will accept a specific exception class an argument. 
+            * For example, any 404 exception will be handled by a ResourceNotFound handler method, which will parse the exception and manipulate a response entity with the following details 
+              [
+                {
+                "timeStamp": "2019-02-18T11:14:17.197+0000",
+                "errorType": "Request not found",
+                "errorMessage": "Requested resource by reference is not found in the datasource",
+                "errorCode": 404,
+                }
+              ]
+        
+        - file name basis design 
+            1. Exception class:
+            Class Name       : ResourceNotFoundException
+
+    Create a constant file and other exception signatures (Error codes, Exception type, Exception message)
+        - high level design
+            Exception messages are created for every expected exceptions that includes the following details 
+              * Exception type
+              * Exception code 
+              * Exception message 
+            
+        - file name basis design 
+            1.Enum
+              Enum name : ErrorType
+              Field : INTERNAL_ERROR(Error Code, Error Message)
+              
+            2.Error Constant
+              Class name : ErrorConstant
+              Field : String ERROR = "ERROR MESSAGE";
+              
+    Create global exception handler with individual methods that handles their respective exceptions and returns response entity. 
+        - high level design
+            The expected exception will be passed as an argument to the handler method. The exception will be parsed and a custom error response will be created that will be returned as the response entity.
+
+        - API design
+            Yet to be decided. 
+            
+        - file name basis design 
+            
+          1. GlobalExceptionHandler:
+
+            Class Name          : GlobalExceptionHandler
+            Method Name         : handleRecordNotFoundException
+            Parameter           : ResourceNotFoundException
+            Method Signature    : public ResponseEntity<List<ErrorInfo>> handleRecordNotFoundException(ResourceNotFoundException ex)
+            Method Return type  : ResponseEntity
+            
+        - sequence diagram
+        

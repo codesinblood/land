@@ -1,0 +1,182 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+.login {
+  float: right;
+  padding-right: 24px;
+  padding-top: 3px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.top_id {
+  background-color: #585858;
+  border: aliceblue;
+  height: 30px;
+}
+
+.ofmc_top {
+  background-color: #F8F8F8;
+  border: aliceblue;
+  height: 75px;
+}
+
+.logo {
+  padding-top: 6px;
+}
+
+.menu {
+bottom: 6px;
+  right: 0;
+  position: absolute;
+  width: 85px;
+  padding-top: 34px;
+  margin-right: -18px;
+  text-decoration: none;
+  color: #EF6C00;
+}
+
+.quicklinks {
+  width: 28%;
+  height: 50%;
+  float: left;
+  background-image: url(../assets/quicklinksbg.png);
+  background-size: cover;
+}
+
+.isms {
+  height: 50%;
+  width: 22%;
+  float: left;
+  background-image: url(../assets/ismsbg.png);
+  background-size: cover;
+  }
+
+.birthday {
+  width: 32%;
+  height: 50%;
+  float: left;
+  background-image: url(../assets/birthdaybg.png);
+  background-size: cover;
+}
+
+.snap {
+  height: 29%;
+  width: 18%;
+  background-image: url(../assets/photosbg.png);
+  background-size: cover;
+  float: left;
+}
+
+.contacts {
+  width: 18%;
+  height: 21%;
+  background-color: aquamarine;
+  background-image: url(../assets/directorybg.png);
+  background-size: cover;
+  float: left;
+}
+
+.news {
+  width: 50%;
+  height: 50%;
+  float: left;
+  background-color: gray;
+  background-image: url(../assets/newsbg.png);
+  background-size: cover;
+}
+
+.discussion {
+  width: 50%;
+  height: 50%;
+  float: left;
+  background-color: red;
+  background-image: url(../assets/forumbg.png);
+  background-size: cover;
+}
+
+.quick {
+  position: absolute;
+  padding-top: 10px;
+  color: white;
+  font-size: 22px;
+}
+
+.contact {
+  position: relative;
+  top: 16%;
+  left: 17%;
+  font-size: x-large;
+  color: white;
+}
+
+.contact_logo {
+  position: relative;
+  top: 27%;
+  left: 16%;
+  width: 65px;
+}
+
+.snap_label {
+  top: 25%;
+  position: absolute;
+  font-size: x-large;
+  font-family: cursive;
+  color: aliceblue;
+}
+
+.sticky {
+  position:sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+
+.mobile-view {
+  width: 100%;
+  height: 50%;
+}
+
+.snap_label {
+  left: 5%;
+  position: relative;
+  top: 32%
+}
+
+/* #quicklinks { */
+  /* width: 100%; */
+  /* height: 50%; */
+/* } */
+
+/* #isms { */
+  /* height: 50%; */
+  /* width: 100%; */
+  /* } */
+
+/* #birthday { */
+  /* width: 100%; */
+  /* height: 50%; */
+/* } */
+
+/* #snap { */
+  /* height: 50%; */
+  /* width: 100%; */
+/* } */
+
+/* #contacts { */
+  /* width: 100%; */
+  /* height: 50%; */
+/* } */
+
+/* #news { */
+  /* width: 100%; */
+  /* height: 50%; */
+/* } */
+
+/* #discussion { */
+  /* width: 100%; */
+  /* height: 50%; */
+/* } */
+}

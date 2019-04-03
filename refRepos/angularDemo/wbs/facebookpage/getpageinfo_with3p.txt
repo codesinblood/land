@@ -1,0 +1,60 @@
+@startuml
+skinparam defaultFontName Courier
+skinparam LifeLineFontSize 10
+autonumber
+
+User -> App : submitInfo(userInfo)
+alt Valid Input
+App -> App : validate(userInfo)
+App -> AppService : loadInfo(userInfo)
+AppService -> AppService : storeInfo(userInfo)
+AppService -> App  :showList(list)
+App --> User  : Ack
+
+
+else No Input or Invalid Input
+App -> App : validate(invalidInput)
+App --> User  : Ack
+end
+@enduml
+                    ,----.                  ,---.                    ,----------.                        
+                    |User|                  |App|                    |AppService|                        
+                    `-+--'                  `-+-'                    `----+-----'                        
+                      | 1 submitInfo(userInfo)|                           |                              
+                      | ---------------------->                           |                              
+                      |                       |                           |                              
+                      |                       |                           |                              
+          ______________________________________________________________________________________________ 
+          ! ALT  /  Valid Input               |                           |                             !
+          !_____/     |                       |                           |                             !
+          !           |                       |----.                      |                             !
+          !           |                       |    | <b>2</b>             |                             !
+          !           |                       |<---' validate(userInfo)   |                             !
+          !           |                       |                           |                             !
+          !           |                       |                           |                             !
+          !           |                       |    3 loadInfo(userInfo)   |                             !
+          !           |                       | -------------------------->                             !
+          !           |                       |                           |                             !
+          !           |                       |                           |----.                        !
+          !           |                       |                           |    | <b>4</b>               !
+          !           |                       |                           |<---' storeInfo(userInfo)    !
+          !           |                       |                           |                             !
+          !           |                       |                           |                             !
+          !           |                       |      5 showList(list)     |                             !
+          !           |                       | <--------------------------                             !
+          !           |                       |                           |                             !
+          !           |         6 Ack         |                           |                             !
+          !           | <- - - - - - - - - - -                            |                             !
+          !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!
+          ! [No Input or Invalid Input]        |                           |                             !
+          !           |                       |----.                                                    !
+          !           |                       |    | <b>7</b>                                           !
+          !           |                       |<---' validate(invalidInput)                             !
+          !           |                       |                                                         !
+          !           |                       |                           |                             !
+          !           |         8 Ack         |                           |                             !
+          !           | <- - - - - - - - - - -                            |                             !
+          !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!
+                    ,-+--.                  ,-+-.                    ,----+-----.                        
+                    |User|                  |App|                    |AppService|                        
+                    `----'                  `---'                    `----------'                        

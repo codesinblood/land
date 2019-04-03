@@ -1,0 +1,29 @@
+public class ClassA {
+    public void methodOne(int i) {
+
+    }
+    public void methodTwo(int i) {
+
+    }
+    public static void methodThree(int i) {
+
+    }
+    public static void methodFour(int i) {
+
+    }
+}
+
+public class ClassB extends ClassA {
+    public static void methodOne(int i) { // It throws an error because of the static. So it cant overridden
+
+    }
+    public void methodTwo(int i) { // Override the Super class.
+
+    }
+    public void methodThree(int i) { // It throws an error because of the static. So it cant overriding
+
+    }
+    public static void methodFour(int i) { // It Hides the method in the super class because of the keyword static.
+
+    }
+}
